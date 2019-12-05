@@ -27,6 +27,14 @@ img{
     justify-content: center;
     perspective: 500px;
 }
+.game-info-container{
+ grid-column: 1/-1;
+ display: flex;
+ justify-content: space-between;
+}
+.game-info{
+    font-size: 20px;
+}
 .memory-card{
     position: relative;
     background-color:black;

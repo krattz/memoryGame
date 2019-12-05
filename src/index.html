@@ -9,7 +9,13 @@
 </head>
 <body>
     <h1 class="page-title">Memory Game</h1>
+
     <div class="memory-game">
+                <div class="game-info-container">
+                                <div class="game-info">
+                                        Flips: <span id="flips">0</span>
+                                </div>
+                            </div>   
 <!-- row 1 card 1 -->
             <div class="memory-card" data-cardtest="one" onclick="flipCard()">    
                     <img class="back-face" src="../pics/skype.png" />   
@@ -72,7 +78,7 @@
             </div>
 </div>
 <h2 id="more">The Button Element</h2>
-<button onclick="resetBoard()" type="submit">Hello</button>
+<button onclick="location.reload()" type="reset">Restart</button>
 <script src="../src/css/memoryGame.js"></script>
 </body>
 </html>

@@ -3,22 +3,24 @@ let hasFlippedCard=false;
 let lockBoard = false;
 let fcard, bcard;
 let counter = document.getElementById('flips');
-parseInt(counter);
+
 let clicks = 0;
 
+
 function flipCard(){
+    counter.innerHTML = clicks++;
     if(lockBoard) return;
         this.classList.toggle('flip');
-        this.counter = this.clicks++;
-        
+
     if(!hasFlippedCard){
         hasFlippedCard = true;
-        fcard = this;     
+        fcard = this;        
     }
     else{
         hasFlippedCard = false;
         bcard = this;
         checkForMatch();
+        
     }
 
 }
@@ -46,15 +48,17 @@ function disableCards(){
     }
 
     function resetBoard(){
-        [hasFlippedCard,lockBoard] = [false,false];
-        [fcard,bcard] = [null,null];
+        hasFlippedCard = false;
+        lockBoard = false;
+        
+        // shuffle();
     }
 
-    function shuffle(){
-        cards.forEach(card =>{
-            let randomP = Math.floor(Math.random()*12);
-            card.style.order = randomP;
-        });         
-    }
+    // function shuffle(){ 
+    //     for(let i=cardsArray.length();i<cardsArray.length()-1;i--){
+    //         let randomIndex= Math.floor(Math.random*(i-+1));
+    //         this.cardsArray[i].style.order = randomIndex;
+    //     }        
+    // }
 
     cards.forEach( card=> card.addEventListener('click',flipCard));

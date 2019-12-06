@@ -1,3 +1,13 @@
+
+// if(document.readyState=== 'loading'){
+// document.addEventListener('DOMContentLoaded',ready());
+
+// }
+// else {ready(); }
+// function ready(){
+//      let overlay = document.getElementsByClassName('overlay-text');
+//      overlay.addEventListener('click',(overlay.classList.remove('visible')));
+// } 
 const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard=false;
 let lockBoard = false;
@@ -60,5 +70,10 @@ function disableCards(){
     //         this.cardsArray[i].style.order = randomIndex;
     //     }        
     // }
+    function gameOver(){
+        if(counter> 14){
+
+        }
+    }
 
     cards.forEach( card=> card.addEventListener('click',flipCard));

@@ -72,7 +72,6 @@ animation: overlay-grow 500ms forwards;
     width: 125px;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     border-radius: 8px;
     border-width: 1px;
     border-style: solid;
@@ -80,12 +79,11 @@ animation: overlay-grow 500ms forwards;
     transform-style: preserve-3d;
     transition: transform .5s;
     transform: scale(1);
+    backface-visibility: visible;
 }
 .card:active{
     transform: scale(0.90);
     transition: transform .5s;
-    /* transform: rotateY(180deg); */
-    /* backface-visibility: hidden; */
 }
 .memory-card.flip{
     transform: rotateY(180deg);

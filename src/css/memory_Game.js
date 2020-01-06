@@ -3,11 +3,12 @@ let hasCardFlipped=false;
 let lockBoard = false;
 let fcard, bcard;
 let counter = document.getElementById('flips');
-
+let modal = document.getElementById("popup1")
 let clicks = 0;
 
 function flipCard(){
-    counter.innerHTML = clicks++;
+    clicks++
+    counter.innerHTML = clicks;
     if(lockBoard) return;
         this.classList.add('flip');
 
@@ -25,16 +26,15 @@ function flipCard(){
 function checkForMatch(){
     if(fcard.dataset.cardtest==bcard.dataset.cardtest){
         disableCards();
+
     }else{
         unflipCards();        
     }
 }
 
 function disableCards(){
-      this.fcard.removeEventListener('click', flipCard());
-      this.fcard.remove('flip');
-      this.bcard.removeEventListener('click', flipCard());
-      this.bcard.remove('flip');
+      this.fcard.remove('click', flipCard());
+      this.bcard.remove('click', flipCard());
       resetBoard();
 }
 

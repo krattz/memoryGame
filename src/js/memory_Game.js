@@ -3,12 +3,12 @@ let hasCardFlipped=false;
 let lockBoard = false;
 let fcard, bcard;
 let counter = document.getElementById('flips');
+
 let modal = document.getElementById("popup1")
 let clicks = 0;
 
 function flipCard(){
-    clicks++
-    counter.innerHTML = clicks;
+    counter.innerHTML = clicks++;
     if(lockBoard) return;
         this.classList.add('flip');
 
@@ -21,7 +21,6 @@ function flipCard(){
         bcard = this;
         checkForMatch(); 
     }
-
 }
 function checkForMatch(){
     if(fcard.dataset.cardtest==bcard.dataset.cardtest){
@@ -33,6 +32,10 @@ function checkForMatch(){
 }
 
 function disableCards(){
+      this.fcard.removeEventListener('click', flipCard());
+      this.fcard.remove('flip');
+      this.bcard.removeEventListener('click', flipCard());
+      this.bcard.remove('flip');
       this.fcard.remove('click', flipCard());
       this.bcard.remove('click', flipCard());
       resetBoard();
@@ -46,20 +49,13 @@ function disableCards(){
         resetBoard();
         },690);
     }
-
     function resetBoard(){
         hasCardFlipped = false;
     }
-
     (function shuffle(){
         cards.forEach(card => {
           let randomPosition = Math.floor(Math.random() *12);
           card.style.order = randomPosition;
         });
       })();
-
-    cards.foreEach( card=> card.addEventListener('click',flipCard));
-    
-    module.exports = {
-        flipCard
-    };
+    cards.forEach( card=> card.addEventListener('click',flipCard));

@@ -1,6 +1,5 @@
 describe("adds all cards to an array",function(){
     var clicks = 0;
-    var theOne;
    beforeEach(function(){
     clicks++;
   

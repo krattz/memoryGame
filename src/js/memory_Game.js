@@ -58,4 +58,4 @@ function disableCards(){
         });
       })();
 
-    cards.forEach( card=> card.addEventListener('click',flipCard));
+    cards.foreEach( card=> card.addEventListener('click',flipCard));

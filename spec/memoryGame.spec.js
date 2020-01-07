@@ -1,10 +1,12 @@
 describe("adds all cards to an array",function(){
     var clicks = 0;
+    var theOne;
    beforeEach(function(){
-       clicks++;
-       spyOn(clicks, 'flips');
+    clicks++;
+  
+    
    });
      it("should increase count as int iterates through array", function(){
-         expect(count).toBe("16");
+         expect(clicks).toBe(clicks++);
      });  
     });

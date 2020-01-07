@@ -59,3 +59,7 @@ function disableCards(){
       })();
 
     cards.foreEach( card=> card.addEventListener('click',flipCard));
+    
+    module.exports = {
+        flipCard
+    };

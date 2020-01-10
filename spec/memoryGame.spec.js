@@ -30,9 +30,9 @@ describe("adds all cards to an array",function(){
 		
 	})
 
-	// afterEach(()=>{
-	// 	delete require.cache[require.resolve('../src/js/memory_Game')]
-	// })
+	afterEach(()=>{
+		delete require.cache[require.resolve('../src/js/memory_Game')]
+	})
 
 	it('must have 12 cards in array', function() {
 		expect(document.getElementsByClassName('memory-card').length).toEqual(12)

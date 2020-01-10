@@ -59,3 +59,7 @@ function disableCards(){
         });
       })();
     cards.forEach( card=> card.addEventListener('click',flipCard));
+
+    module.exports = {
+        flipCard,disableCards
+    }

@@ -4,7 +4,6 @@ let lockBoard = false;
 let fcard, bcard;
 let counter = document.getElementById('flips');
 
-let modal = document.getElementById("popup1")
 let clicks = 0;
 
 function flipCard(){

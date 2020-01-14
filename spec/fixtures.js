@@ -103,7 +103,6 @@ const html = `<!DOCTYPE html>
 </div>
 <h2 id="more">Click button to start over</h2>
 <button onclick="location.reload()" type="reset">Restart</button>
-<script src="../src/js/memory_Game.js"></script>
 </body>
 </html>`
 module.exports = html;

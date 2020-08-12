@@ -1,0 +1,11 @@
+{
+  "name": "memory_game-tests",
+  "version": "1.0.0",
+  "description": "tests for memorygame app using jasmine",
+  "main": "memoryGame.spec.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "Katleho",
+  "license": "ISC"
+}
